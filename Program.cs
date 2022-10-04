@@ -5,18 +5,27 @@
 22 3 9 -> 22 */
 
 int a, b, c;
+
+Console.WriteLine("Введите первое число");
+while (!int.TryParse(Console.ReadLine(), out a))
+{
+	Console.WriteLine("Не верный ввод. Повторите");
+}
+
+Console.WriteLine("Введите второе число");
+while (!int.TryParse(Console.ReadLine(), out b))
+{
+	Console.WriteLine("Не верный ввод. Повторите");
+}
+
+Console.WriteLine("Введите третье число");
+while (!int.TryParse(Console.ReadLine(), out c))
+{
+	Console.WriteLine("Не верный ввод. Повторите");
+}
 int max = a;
-
-Console.Writeline("Введите первое число");
-int.TryParse(Console.Readline(), out a);
-
-Console.Writeline("Введите второе число");
-int.TryParse(Console.Readline(), out b);
-
-Console.Writeline("Введите третье число");
-int.TryParse(Console.Readline(), out c);
 if (a > max) max = a;
 if (b > max) max = b;
 if (c > max) max = c;
 
-Console.Writeline("Максимальное число " + max);
+Console.WriteLine("Максимальное число " + max);
